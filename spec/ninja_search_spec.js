@@ -1,5 +1,5 @@
 require("spec_helper.js");
-require("../src/ninja_search.js");
+require("../public/ninja_search.js");
 
 Screw.Unit(function(){
   describe("inline activation button", function(){

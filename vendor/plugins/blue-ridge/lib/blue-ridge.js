@@ -23,7 +23,6 @@ function debug(message) {
 
 function derive_spec_name_from_current_file() {
   var file_prefix = new String(window.location).match(/.*\/(.*?)\.html/)[1];
-  console.log(file_prefix);
   return file_prefix + "_spec.js";
 }
 
