@@ -7,6 +7,11 @@
 // @version       1.0
 // ==/UserScript==
 
+// THIS FILE IS FOR LOCAL QA TESTING
+// The project must be mounted as http://ninja-search-js.local
+// I do this using Passenger (drop project folder into Passenger PrefPane)
+// The ninja-search.user.js file contains the public url for downloading scripts and assets
+
 (function() {
   var head = document.getElementsByTagName("head")[0];
   
@@ -15,7 +20,7 @@
     style.setAttribute("type", "text/css");
     style.setAttribute("rel", "stylesheet");
     style.setAttribute("media", "screen");
-    style.setAttribute("href", "http://drnic.github.com/ninja-search-js/dist/stylesheets/flexselect.css");
+    style.setAttribute("href", "http://ninja-search-js.local/stylesheets/flexselect.css");
     head.appendChild(style);
   };
 
@@ -32,9 +37,9 @@
       script.innerHTML = "jQuery.noConflict();";
       head.appendChild(script);
     }
-    require("http://drnic.github.com/ninja-search-js/dist/liquidmetal.js");
-    require("http://drnic.github.com/ninja-search-js/dist/jquery.flexselect.js");
-    require("http://drnic.github.com/ninja-search-js/dist/ninja_search.js");
+    require("http://ninja-search-js.local/liquidmetal.js");
+    require("http://ninja-search-js.local/jquery.flexselect.js");
+    require("http://ninja-search-js.local/ninja_search.js");
   };
   
   flexselect_theme();

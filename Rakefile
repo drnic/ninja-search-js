@@ -5,7 +5,7 @@ require 'rake/packagetask'
 
 $:.unshift File.dirname(__FILE__) + "/lib"
 
-APP_VERSION  = '0.0.1'
+APP_VERSION  = '1.0.0'
 APP_NAME     = 'ninja-search-js'
 RUBYFORGE_PROJECT = APP_NAME
 APP_TEMPLATE = "#{APP_NAME}.js.erb"
@@ -23,9 +23,6 @@ task :default => [:dist, :package, :clean_package_source]
 
 desc "Builds the distribution"
 task :dist do
-  $:.unshift File.join(APP_ROOT, 'lib')
-  require 'protodoc'
-  require 'fileutils'
   FileUtils.mkdir_p APP_DIST_DIR
 
   Dir.chdir(APP_SRC_DIR) do
