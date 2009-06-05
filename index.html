@@ -7,6 +7,7 @@
 
 	<title>drnic/ninja-search-js @ GitHub</title>
 	
+  <link rel="stylesheet" href="css/badge.css" type="text/css">
 	<style type="text/css">
 		body {
   		margin-top: 1.0em;
@@ -29,47 +30,68 @@
 		pre { background: #000; color: #fff; padding: 15px;}
     hr { border: 0; width: 80%; border-bottom: 1px solid #aaa}
     .footer { text-align:center; padding-top:30px; font-style: italic; }
-    .logo { float: right; width: 193px; height: 193px; background-image: url(images/app_icon.png); text-indent: -9001px; text-align: left;}
+    .logo { float: right; display: block; width: 193px; height: 193px; background-image: url(images/app_icon.png); text-indent: -9001px; text-align: left;}
 	</style>
 	
 </head>
 
 <body>
+  <!-- Begin badge -->
+  <div class="mocra-badge">
+    
+    <h4>Made by Mocra</h4>
+    <ul class="small">
+      <li><a href="http://commitchat.com" target="_blank"><span>+</span>CommitChat</a></li>
+      <li class="even"><a href="http://drnicwilliams.com" target="_blank"><span>+</span>Dr Nic Williams</a></li>
+      <li><a href="http://mocra.com/projects/surfreport" target="_blank"><span>+</span>Oakley Surf Report</a></li>
+      <li class="even"><a href="http://orchestrateapp.com" target="_blank"><span>+</span>Orchestrate</a></li>
+      <li class="corners">&nbsp;</li>
+    </ul>
+    
+  </div>
+  <!-- Badge end -->
+  
   <div id="container">
 
-    <div class="logo">NINJA
-    </div>
+    <a class="logo" href="dist/ninja-search.user.js" title="Click to install Ninja Search">Ninja Search - the Greasemonkey Script</a>
       
     <h1><a href="http://github.com/drnic/ninja-search-js">Ninja Search - the Greasemonkey Script</a> 
       <span class="small">by <a href="http://github.com/drnic">drnic</a></span></h1>
 
     <div class="description">
-      <p>Every annoyed by HTML drop down lists that are too long, not ordered or in some other way difficult/slow to find and select an item? <strong>Ninja Search - the Greasemonkey Script</strong> is for you.</p>
+      <p>Do long drop down lists make you want to send out an assassin and hunt down web developers? Then I have the ninja for you.</p>
+      
+      <div class="thumbnail"><a href="http://skitch.com/drnic/b19kn/1-long-drop-downs-hate-humans"><img  style="float: right;" src="http://img.skitch.com/20090605-fjjyx32iidgw1jtq1kbys8tbr7.preview.jpg" alt="1. Long drop downs hate humans" /></a></div>
 
-      <p>Every web page you visit will have its <code>&lt;select&gt;</code> elements suffixed with a small Ninja Search icon. When you click this, the <code>&lt;select&gt;</code> drop down element is converted into a text field with intelligent autocompletion. When you select an element, the text field disappears and the original <code>&lt;select&gt;</code> element returns with the desired selected item.</p>
+      <p><strong>Ninja Search - the Greasemonkey Script</strong> (aka <strong>ninja-search-js</strong>) converts all nasty, long drop down lists into autocompleteable text fields; and then then snap back into their drop down list form when you've selected an item.</p>
+
     </div>
     
     <h2>Demo</h2>
     
-    <p>You need a demo. So imagine the worst of all drop downs - the time zone selector. Now imagine you don't live in one of the first 8 time zones and now you're living the pain.</p>
     
-    <div class="thumbnail"><a href="http://skitch.com/drnic/b19kn/1-long-drop-downs-hate-humans"><img src="http://img.skitch.com/20090605-fjjyx32iidgw1jtq1kbys8tbr7.preview.jpg" alt="1. Long drop downs hate humans" /></a>
+    <p>You need a demo.</p>
       
-    <p>I live in Brisbane. Where the hell is it on this huge drop down? The <strong>Ninja Search - the Greasemonkey Script</strong> is here to help.</p>
     
-    <div class="thumbnail"><a href="http://skitch.com/drnic/b19kr/2-hit-the-ninja-to-search"><img src="http://img.skitch.com/20090605-jqfefe21ucremdp5bss8qyas5s.preview.jpg" alt="2. Hit the ninja to search" /></a>
+    <p>Imagine the worst of all drop downs - the time zone selector. The 8 USA time zones are commonly first, then the other 100 time zones. Now imagine you don't live in one of the first 8 time zones and now you're living the pain.</p>
+    
+    <p>I live in Brisbane. Where the hell is it on this huge drop down?  Feel the hurt. Now, let's get some help from a ninja. Specifically, the <strong>Ninja Search - the Greasemonkey Script</strong> is here to help.</p>
+    
+    <div class="thumbnail"><a href="http://skitch.com/drnic/b19kr/2-hit-the-ninja-to-search"><img src="http://img.skitch.com/20090605-jqfefe21ucremdp5bss8qyas5s.preview.jpg" alt="2. Hit the ninja to search" /></a></div>
       
-    <p>Once you have this script installed, all drop downs are accompanied by a Ninja. He's your new best friend. Click him to activate Ninja Search on that drop down list.</p>
+    <p>Once you have this script installed, all drop downs are accompanied by a friendly Ninja. He's your new best friend. Click him to activate Ninja Search on that drop down list.</p>
     
-    <div class="thumbnail"><a href="http://skitch.com/drnic/b19kg/3-changes-to-textfield"><img src="http://img.skitch.com/20090605-pbm262shij772yeufkiexfph4j.preview.jpg" alt="3. Changes to textfield" /></a>
+    <div class="thumbnail"><a href="http://skitch.com/drnic/b19kg/3-changes-to-textfield"><img src="http://img.skitch.com/20090605-pbm262shij772yeufkiexfph4j.preview.jpg" alt="3. Changes to textfield" /></a></div>
     
     <p>We use a Quicksilver-like algorithm to find matches similar to what you typed (thanks to <a href="http://github.com/rmm5t/liquidmetal">liquidmetal</a> and <a href="http://rmm5t.github.com/jquery-flexselect">jquery-flexselect</a> projects by <a href="http://www.emacsblog.org/">Ryan McGeary</a>)</p>
     
-    <div class="thumbnail"><a href="http://skitch.com/drnic/b19kj/4-type-in-any-letters"><img src="http://img.skitch.com/20090605-eq613jbk3e44t6w9nkqcsa7f4r.preview.jpg" alt="4. Type in any letters" /></a>
+    <div class="thumbnail"><a href="http://skitch.com/drnic/b19kj/4-type-in-any-letters"><img src="http://img.skitch.com/20090605-eq613jbk3e44t6w9nkqcsa7f4r.preview.jpg" alt="4. Type in any letters" /></a></div>
     
-    <div class="thumbnail"><a href="http://skitch.com/drnic/b19kx/5-choose-from-a-small-list"><img src="http://img.skitch.com/20090605-t82418x1j76w4fm8s44cec9cr3.preview.jpg" alt="5. Choose from a small list" /></a>
+    <div class="thumbnail"><a href="http://skitch.com/drnic/b19kx/5-choose-from-a-small-list"><img src="http://img.skitch.com/20090605-t82418x1j76w4fm8s44cec9cr3.preview.jpg" alt="5. Choose from a small list" /></a></div>
     
-    <div class="thumbnail"><a href="http://skitch.com/drnic/b19kt/6-after-selection-it-reverts-to-the-dropdown"><img src="http://img.skitch.com/20090605-pq2kp2nq58ebsjr32detdaxatx.preview.jpg" alt="6. After selection it reverts to the dropdown" /></a>
+    <div class="thumbnail"><a href="http://skitch.com/drnic/b19kt/6-after-selection-it-reverts-to-the-dropdown"><img src="http://img.skitch.com/20090605-pq2kp2nq58ebsjr32detdaxatx.preview.jpg" alt="6. After selection it reverts to the dropdown" /></a></div>
+    
+    <p>After you select an item then the Ninja Search field will disappear into the night and your original dropdown field will return, with your selected item being displayed.</p>
     
     
     <h2>Dependencies</h2>

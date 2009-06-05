@@ -1,0 +1,13 @@
+/*Made by Mocra badge*/
+div.mocra-badge {position:absolute;top:0;right:6px;width:132px;z-index:99}
+  .mocra-badge h4 {height:26px;margin:0;text-indent:-999em;background:url('../images/badge/sprite.png') -18px -17px no-repeat;cursor:pointer}
+  .mocra-badge:hover h4, .mocra-badge.hover h4 {background-position:-18px -57px}
+  .mocra-badge ul {display:none;width:100%}
+  .mocra-badge:hover ul, .mocra-badge.hover ul {display:block}
+    .mocra-badge li {height:28px;position:relative}
+      .mocra-badge li a {height:12px;padding:6px 0 10px 22px;display:block;font-size: 12px;}
+      .mocra-badge li a:link, .mocra-badge li a:visited {background-color:#7b715f;color:#fff;text-decoration:none}
+      .mocra-badge .even a:link, .mocra-badge .even a:visited {background-color:#8d816c}
+      .mocra-badge li a:active, .mocra-badge li a:hover, .mocra-badge li a:focus, .mocra-badge .even a:active, .mocra-badge .even a:hover, .mocra-badge .even a:focus {background-color:#b1a99e}
+        .mocra-badge li a span {position:absolute;top:6px;left:8px;color:#a4967e}
+    .mocra-badge li.corners {background:url('../images/badge/sprite.png') -18px -93px no-repeat;height:17px}
