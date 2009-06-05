@@ -116,7 +116,7 @@ Screw.Unit(function(){
       $('.ninja_search_activation:nth(1)').click();
     });
     it("should have unique ids for each select", function(){
-      expect([$('select#no-id').size(), $('select#no-id-1').size(), $('select#no-id-2').size()]).to(equal, [1,1,1]);
+      expect([$('select[id=no-id]').size(), $('select[id=no-id-1]').size(), $('select[id=no-id-2]').size()]).to(equal, [1,1,1]);
     });
     it("should make selections normally with 1st duplicate", function(){
       $('select#no-id:nth(1) li:nth(0)').mouseover().mouseup();

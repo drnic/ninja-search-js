@@ -6,7 +6,7 @@
         var baseid = $(this).attr('name').replace(/\[/,'-').replace(/\]/,'');
         var id = baseid;
         var uniqueCounter = 0;
-        while ($('#' + id).size() > 0) {
+        while ($('select[id=' + id + ']').size() > 0) {
           uniqueCounter += 1;
           id = baseid + "-" + uniqueCounter;
         }
