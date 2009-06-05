@@ -1,12 +1,17 @@
 (function($){ 
   $(function() {
     $('select').each(function(index) {
+      // if <select> has no id attribute, then give it one based on name attribute
       if ($(this).attr('id') == null || $(this).attr('id').length == 0) {
         var id = $(this).attr('name').replace(/\[/,'-').replace(/\]/,'');
         $(this).attr('id', id);
       }
+      
+      // create the Ninja Search button, with rel attribute referencing corresponding <select id="...">
       $('<a class="ninja_search_activation" rel="' + $(this).attr('id') + '">ninja search</a>')
       .insertAfter($(this))
+      
+      // register onclick handler
       .click(function(event) {
         var selectId = $(this).attr('rel');
         var selectField = $('#' + selectId);
