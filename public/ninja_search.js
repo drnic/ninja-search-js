@@ -3,7 +3,13 @@
     $('select').each(function(index) {
       // if <select> has no id attribute, then give it one based on name attribute
       if ($(this).attr('id') == null || $(this).attr('id').length == 0) {
-        var id = $(this).attr('name').replace(/\[/,'-').replace(/\]/,'');
+        var baseid = $(this).attr('name').replace(/\[/,'-').replace(/\]/,'');
+        var id = baseid;
+        var uniqueCounter = 0;
+        while ($('#' + id).size() > 0) {
+          uniqueCounter += 1;
+          id = baseid + "-" + uniqueCounter;
+        }
         $(this).attr('id', id);
       }
       

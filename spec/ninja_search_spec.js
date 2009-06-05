@@ -101,13 +101,30 @@ Screw.Unit(function(){
   describe("select with no id attribute", function(){
     before(function(){
       $('.ninja_search_activation:nth(1)').click();
-      $('select#no-id li:nth(0)').mouseover().mouseup();
+      $('select#no-id:nth(0) li:nth(0)').mouseover().mouseup();
     });
     it("should assign the <select> an id based on name attribute", function(){
-      expect($('select#no-id').size()).to(equal, 1);
+      expect($('select#no-id:nth(0)').size()).to(equal, 1);
     });
     it("should make selections normally", function(){
-      expect($('select#no-id option:selected').val()).to(equal, '1');
+      expect($('select#no-id:nth(0) option:selected').val()).to(equal, '1');
+    });
+  });
+
+  describe("select with no id attribute that has same name as another select element", function(){
+    before(function(){
+      $('.ninja_search_activation:nth(1)').click();
+    });
+    it("should have unique ids for each select", function(){
+      expect([$('select#no-id').size(), $('select#no-id-1').size(), $('select#no-id-2').size()]).to(equal, [1,1,1]);
+    });
+    it("should make selections normally with 1st duplicate", function(){
+      $('select#no-id:nth(1) li:nth(0)').mouseover().mouseup();
+      expect($('select#no-id-1 option:selected').val()).to(equal, '11');
+    });
+    it("should make selections normally with 2nd duplicate", function(){
+      $('select#no-id:nth(2) li:nth(0)').mouseover().mouseup();
+      expect($('select#no-id-2 option:selected').val()).to(equal, '21');
     });
   });
 });
