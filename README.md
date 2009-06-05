@@ -1,13 +1,16 @@
-Ninja Search - the Greasemonkey Script
+Ninja Search JS - the Greasemonkey Script
 --------------------------------------
 
 Description
 ===========
 
-Every annoyed by HTML drop down lists that are too long, not ordered or in some other way difficult/slow to find and select an item? Ninja Search - the Greasemonkey Script is for you.
+Do long drop down lists make you want to send out an assassin and hunt down web developers? Then I have the ninja for you.
 
-Every web page you visit will have its `<select>` elements suffixed with a small Ninja Search icon. When you click this, the `<select>` drop down element is converted into a text field with intelligent autocompletion. When you select an element, the text field disappears and the original `<select>` element returns with the desired selected item.
+Ninja Search JS - the Greasemonkey Script (aka ninja-search-js) converts all nasty, long drop down lists into autocompleteable text fields; and then then snap back into their drop down list form when you've selected an item.
 
+See the [home page](http://drnic.github.com/ninja-search-js/) for more information, a demo, and the downloadable Greasemonkey/GreaseKit script.
+
+Ok, let's put the [installer script here](http://drnic.github.com/ninja-search-js/dist/ninja-search.user.js) too.
 
 Author
 ======
@@ -19,7 +22,7 @@ Ninja Search icon
 
 Dan Ritz [dan.ritz@gmail.com](mailto:&#x64;&#x61;&#x6E;&#x2E;&#x72;&#x69;&#x74;&#x7A;&#x40;&#x67;&#x6D;&#x61;&#x69;&#x6C;&#x2E;&#x63;&#x6F;&#x6D;), [http://wurkit.com](http://wurkit.com) - thanks for coming to RailsCamp 5, Dan! 
 
-The icon was original developed for the Cocoa application Ninja Search, for which the idea was adapted into a greasemonkey script. So I kept the name and thus got to keep the cool icon :)
+The icon was original developed for the Cocoa application Ninja Search, for which the idea was adapted into a Greasemonkey script. So I kept the name and thus got to keep the cool icon :)
 
 Sponsor
 =======
