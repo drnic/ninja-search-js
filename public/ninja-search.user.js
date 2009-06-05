@@ -28,6 +28,9 @@
   var load_latest_ninja_search = function() {
     if (typeof jQuery === "undefined" || jQuery === null) {
       require("http://ninja-search-js.local/jquery.js");
+      var script = document.createElement("script");
+      script.innerHTML = "jQuery.noConflict();";
+      head.appendChild(script);
     }
     require("http://ninja-search-js.local/liquidmetal.js");
     require("http://ninja-search-js.local/jquery.flexselect.js");

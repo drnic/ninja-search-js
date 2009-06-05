@@ -44,6 +44,7 @@ a.ninja_search_activation {
   height: 20px;
   background: url(../images/ninja_search.png) no-repeat;
   text-indent: -9001px;
+  text-align: left;
   cursor: pointer;
 }
 
