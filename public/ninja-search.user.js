@@ -26,15 +26,7 @@
     head.appendChild(script);
   };
   var load_latest_ninja_search = function() {
-    if (typeof jQuery === "undefined" || jQuery === null) {
-      require("http://drnic.github.com/ninja-search-js/dist/jquery.js");
-      var script = document.createElement("script");
-      script.innerHTML = "jQuery.noConflict();";
-      head.appendChild(script);
-    }
-    require("http://drnic.github.com/ninja-search-js/dist/liquidmetal.js");
-    require("http://drnic.github.com/ninja-search-js/dist/jquery.flexselect.js");
-    require("http://drnic.github.com/ninja-search-js/dist/ninja_search.js");
+    require("http://drnic.github.com/ninja-search-js/dist/ninja_search_complete.js");
   };
   
   flexselect_theme();
