@@ -14,6 +14,13 @@ Author
 
 [Dr Nic Williams](http://drnicwilliams)
 
+Ninja Search icon
+=================
+
+Dan Ritz [dan.ritz@gmail.com](mailto:&#x64;&#x61;&#x6E;&#x2E;&#x72;&#x69;&#x74;&#x7A;&#x40;&#x67;&#x6D;&#x61;&#x69;&#x6C;&#x2E;&#x63;&#x6F;&#x6D;), [http://wurkit.com](http://wurkit.com) - thanks for coming to RailsCamp 5, Dan! 
+
+The icon was original developed for the Cocoa application Ninja Search, for which the idea was adapted into a greasemonkey script. So I kept the name and thus got to keep the cool icon :)
+
 Sponsor
 =======
 
