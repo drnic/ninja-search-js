@@ -28,10 +28,9 @@ var LiquidMetal = function() {
       var scores = this.buildScoreArray(string, abbreviation);
 
       var sum = 0.0;
-      for (var i in scores) {
+      for (var i=0; i < scores.length; i++) {
         sum += scores[i];
       }
-
       return (sum / scores.length);
     },
 
@@ -42,7 +41,7 @@ var LiquidMetal = function() {
 
       var lastIndex = -1;
       var started = false;
-      for (var i in chars) {
+      for (var i=0; i < chars.length; i++) {
         var c = chars[i];
         var index = lower.indexOf(c, lastIndex+1);
         if (index < 0) return fillArray(scores, SCORE_NO_MATCH);
@@ -62,7 +61,6 @@ var LiquidMetal = function() {
         scores[index] = SCORE_MATCH;
         lastIndex = index;
       }
-
       var trailingScore = started ? SCORE_TRAILING_BUT_STARTED : SCORE_TRAILING;
       fillArray(scores, trailingScore, lastIndex+1);
       return scores;
