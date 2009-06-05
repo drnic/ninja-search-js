@@ -1,6 +1,10 @@
 (function($){ 
   $(function() {
     $('select').each(function(index) {
+      if ($(this).attr('id') == null || $(this).attr('id').length == 0) {
+        var id = $(this).attr('name').replace(/\[/,'-').replace(/\]/,'');
+        $(this).attr('id', id);
+      }
       $('<a class="ninja_search_activation" rel="' + $(this).attr('id') + '">ninja search</a>')
       .insertAfter($(this))
       .click(function(event) {

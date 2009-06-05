@@ -5,15 +5,15 @@ Screw.Unit(function(){
   describe("inline activation button", function(){
     it("should display NinjaSearch image button", function(){
       var button = $('.ninja_search_activation');
-      expect(button.size()).to(equal, 1);
+      expect(button.size()).to(be_gte, 1);
     });
   });
   describe("activation", function(){
     before(function(){
-      $('.ninja_search_activation').click();
+      $('.ninja_search_activation:nth(0)').click();
     });
     after(function(){
-      $('.ninja_search_activation').click();
+      $('.ninja_search_activation:nth(0)').click();
     });
     it("should render a flexselect input", function(){
       expect($('input#person_user_time_zone_id_flexselect').size()).to(equal, 1);
@@ -30,7 +30,7 @@ Screw.Unit(function(){
   });
   describe("deactivation by clicking", function(){
     before(function(){
-      var button = $('.ninja_search_activation');
+      var button = $('.ninja_search_activation:nth(0)');
       button.click();
       button.click();
     });
@@ -46,7 +46,7 @@ Screw.Unit(function(){
   });
   describe("deactivation by escaping", function(){
     before(function(){
-      var button = $('.ninja_search_activation');
+      var button = $('.ninja_search_activation:nth(0)');
       button.click();
       $('input#person_user_time_zone_id_flexselect').keydown(); //trigger('keydown', [{keyCode: 27}]);
     });
@@ -62,7 +62,7 @@ Screw.Unit(function(){
   });
   describe("selection", function(){
     before(function(){
-      $('.ninja_search_activation').click();
+      $('.ninja_search_activation:nth(0)').click();
       $('#person_user_time_zone_id_flexselect_dropdown li:nth(1)').mouseover().mouseup();
     });
     it("should restore original select after selection from drop down", function(){
@@ -76,6 +76,19 @@ Screw.Unit(function(){
     });
     it("should change select's selection after selection from drop down", function(){
       expect($('select#person_user_time_zone_id option:selected').val()).to(equal, 'Alaska');
+    });
+  });
+  
+  describe("select with no id attribute", function(){
+    before(function(){
+      $('.ninja_search_activation:nth(1)').click();
+      $('select#no-id li:nth(0)').mouseover().mouseup();
+    });
+    it("should assign the <select> an id based on name attribute", function(){
+      expect($('select#no-id').size()).to(equal, 1);
+    });
+    it("should make selections normally", function(){
+      expect($('select#no-id option:selected').val()).to(equal, '1');
     });
   });
 });
