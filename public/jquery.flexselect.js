@@ -2,6 +2,8 @@
  * flexselect: a jQuery plugin, version: %RELEASE_VERSION% (%RELEASE_DATE%)
  * @requires jQuery v1.3 or later
  *
+ * MODIFIED for Ninja Search by Dr Nic Williams
+ *
  * FlexSelect is a jQuery plugin that makes it easy to convert a select box into
  * a Quicksilver-style, autocompleting, flex matching selection tool.
  *

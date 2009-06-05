@@ -78,7 +78,26 @@ Screw.Unit(function(){
       expect(jQuery('select#person_user_time_zone_id option:selected').val()).to(equal, 'Alaska');
     });
   });
-  
+  describe("selection after scoping", function(){
+    before(function(){
+      $('.ninja_search_activation:nth(0)').click();
+      $('#person_user_time_zone_id_flexselect').val('bris').focus();
+      $('#person_user_time_zone_id_flexselect_dropdown li:nth(0)').mouseover().mouseup();
+    });
+    it("should restore original select after selection from drop down", function(){
+      expect($('select#person_user_time_zone_id:visible').size()).to(equal, 1);
+    });
+    it("should remove flexselect after selection from drop down", function(){
+      expect($('input#person_user_time_zone_id_flexselect').size()).to(equal, 0);
+    });
+    it("should remove flexselect dropdown after selection from drop down", function(){
+      expect($('#person_user_time_zone_id_flexselect_dropdown').size()).to(equal, 0);
+    });
+    it("should change select's selection after selection from drop down", function(){
+      expect($('select#person_user_time_zone_id option:selected').val()).to(equal, 'Brisbane');
+    });
+  });
+
   describe("select with no id attribute", function(){
     before(function(){
       jQuery('.ninja_search_activation:nth(1)').click();
