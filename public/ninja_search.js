@@ -2,9 +2,12 @@
   $(function() {
     $('select').each(function(index) {
       // if <select> has no id attribute, then give it one based on name attribute
-      if ($(this).attr('id') == null || $(this).attr('id').length == 0) {
-        var baseid = $(this).attr('name').replace(/\[/,'-').replace(/\]/,'');
-        var id = baseid;
+      var id = $(this).attr('id');
+      // if (id == null || id.length == 0) {
+      if (id == null || id.length == 0 || $('select[id=' + id + ']').size() > 1) {
+        var baseid = (id == null || id.length == 0) ? 
+          $(this).attr('name').replace(/\[/,'-').replace(/\]/,'') : id;
+        id = baseid;
         var uniqueCounter = 0;
         while ($('select[id=' + id + ']').size() > 0) {
           uniqueCounter += 1;

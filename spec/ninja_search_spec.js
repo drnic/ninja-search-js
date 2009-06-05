@@ -127,5 +127,17 @@ Screw.Unit(function(){
       expect($('select#no-id-2 option:selected').val()).to(equal, '21');
     });
   });
+  describe("selects with duplicate ids are re-id'd with unique ids", function(){
+    before(function(){
+      $('.ninja_search_activation:nth(5)').click(); // 2nd of the duplicates
+      $('#person_contact_data_phone_numbers__location-2_flexselect_dropdown li:nth(1)').mouseover().mouseup();
+    });
+    it("should assign unique id to one of the duplicate selects", function(){
+      expect($('[id=person_contact_data_phone_numbers__location-1]').size()).to(equal, 1);
+    });
+    it("should activate the 2nd select and not the first", function(){
+      expect($('#person_contact_data_phone_numbers__location').val()).to(equal, 'Mobile');
+    });
+  });
 });
 
