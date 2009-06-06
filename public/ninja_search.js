@@ -17,7 +17,7 @@
       }
       
       // create the Ninja Search button, with rel attribute referencing corresponding <select id="...">
-      $('<a class="ninja_search_activation" rel="' + $(this).attr('id') + '">ninja search</a>')
+      $('<a class="ninja_search_activation" rel="' + id + '">ninja search</a>')
       .insertAfter($(this))
       
       // register onclick handler

@@ -4,16 +4,16 @@ require("../public/ninja_search.js");
 Screw.Unit(function(){
   describe("inline activation button", function(){
     it("should display NinjaSearch image button", function(){
-      var button = $('.ninja_search_activation');
+      var button = $('a.ninja_search_activation');
       expect(button.size()).to(be_gte, 1);
     });
   });
   describe("activation", function(){
     before(function(){
-      $('.ninja_search_activation:nth(0)').click();
+      $('a.ninja_search_activation:nth(0)').click();
     });
     after(function(){
-      $('.ninja_search_activation:nth(0)').click();
+      $('a.ninja_search_activation:nth(0)').click();
     });
     it("should render a flexselect input", function(){
       expect($('input#person_user_time_zone_id_flexselect').size()).to(equal, 1);
@@ -30,7 +30,7 @@ Screw.Unit(function(){
   });
   describe("deactivation by clicking", function(){
     before(function(){
-      var button = $('.ninja_search_activation:nth(0)');
+      var button = $('a.ninja_search_activation:nth(0)');
       button.click();
       button.click();
     });
@@ -46,7 +46,7 @@ Screw.Unit(function(){
   });
   describe("deactivation by escaping", function(){
     before(function(){
-      var button = $('.ninja_search_activation:nth(0)');
+      var button = $('a.ninja_search_activation:nth(0)');
       button.click();
       $('input#person_user_time_zone_id_flexselect').keydown(); //trigger('keydown', [{keyCode: 27}]);
     });
@@ -62,7 +62,7 @@ Screw.Unit(function(){
   });
   describe("selection", function(){
     before(function(){
-      $('.ninja_search_activation:nth(0)').click();
+      $('a.ninja_search_activation:nth(0)').click();
       $('#person_user_time_zone_id_flexselect_dropdown li:nth(1)').mouseover().mouseup();
     });
     it("should restore original select after selection from drop down", function(){
@@ -80,7 +80,7 @@ Screw.Unit(function(){
   });
   describe("selection after scoping", function(){
     before(function(){
-      $('.ninja_search_activation:nth(0)').click();
+      $('a.ninja_search_activation:nth(0)').click();
       $('#person_user_time_zone_id_flexselect').val('bris').focus();
       $('#person_user_time_zone_id_flexselect_dropdown li:nth(0)').mouseover().mouseup();
     });
@@ -100,7 +100,7 @@ Screw.Unit(function(){
   
   describe("select with no id attribute", function(){
     before(function(){
-      $('.ninja_search_activation:nth(1)').click();
+      $('a.ninja_search_activation:nth(1)').click();
       $('select#no-id:nth(0) li:nth(0)').mouseover().mouseup();
     });
     it("should assign the <select> an id based on name attribute", function(){
@@ -113,7 +113,7 @@ Screw.Unit(function(){
 
   describe("select with no id attribute that has same name as another select element", function(){
     before(function(){
-      $('.ninja_search_activation:nth(1)').click();
+      $('a.ninja_search_activation:nth(1)').click();
     });
     it("should have unique ids for each select", function(){
       expect([$('select[id=no-id]').size(), $('select[id=no-id-1]').size(), $('select[id=no-id-2]').size()]).to(equal, [1,1,1]);
@@ -129,7 +129,7 @@ Screw.Unit(function(){
   });
   describe("selects with duplicate ids are re-id'd with unique ids", function(){
     before(function(){
-      $('.ninja_search_activation:nth(5)').click(); // 2nd of the duplicates
+      $('a.ninja_search_activation:nth(5)').click(); // 2nd of the duplicates
       $('#person_contact_data_phone_numbers__location_flexselect_dropdown li:nth(1)').mouseover().mouseup();
     });
     it("should assign unique id to one of the duplicate selects", function(){
