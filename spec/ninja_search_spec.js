@@ -3,9 +3,11 @@ require("../public/ninja_search.js");
 
 Screw.Unit(function(){
   describe("inline activation button", function(){
-    it("should display NinjaSearch image button", function(){
-      var button = $('a.ninja_search_activation');
-      expect(button.size()).to(be_gte, 1);
+    it("should display Ninja Search image button", function(){
+      expect($('a.ninja_search_activation').size()).to(be_gte, 1);
+    });
+    it("should not display Ninja Search if <= 5 items", function(){
+      expect($('a.ninja_search_activation[rel="small-list"]').size()).to(equal, 0);
     });
   });
   describe("activation", function(){
