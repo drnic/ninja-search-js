@@ -72,6 +72,8 @@
       <div class="thumbnail"><a href="http://skitch.com/drnic/b19kn/1-long-drop-downs-hate-humans"><img  style="float: right;" src="http://img.skitch.com/20090605-fjjyx32iidgw1jtq1kbys8tbr7.preview.jpg" alt="1. Long drop downs hate humans" /></a></div>
 
       <p><strong>Ninja Search JS - the Greasemonkey Script</strong> (aka <strong>ninja-search-js</strong>) converts all nasty, long drop down lists into autocompleteable text fields; and then then snap back into their drop down list form when you've selected an item.</p>
+      
+      <p>If the drop down has 5 or fewer options then the ninja never appears. He's too busy.</p>
 
     </div>
 
@@ -223,6 +225,16 @@
       <option value="Marshall Is.">(GMT+12:00) Marshall Is.</option>
       <option value="Wellington">(GMT+12:00) Wellington</option>
       <option value="Nuku'alofa">(GMT+13:00) Nuku'alofa</option>
+    </select>
+    
+    <p>There is no ninja for small lists (5 or fewer items):</p>
+    
+    <select id="small-list" name="small-list">
+      <option value="1">One</option>
+      <option value="2">Two</option>
+      <option value="3">Three</option>
+      <option value="4">Four</option>
+      <option value="5">Five</option>
     </select>
     
     
