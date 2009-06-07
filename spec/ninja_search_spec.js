@@ -105,6 +105,9 @@ Screw.Unit(function(){
       $('a.ninja_search_activation:nth(1)').click();
       $('select#no-id:nth(0) li:nth(0)').mouseover().mouseup();
     });
+    after(function(){
+      $('a.ninja_search_activation:nth(1)').click();
+    });
     it("should assign the <select> an id based on name attribute", function(){
       expect($('select#no-id:nth(0)').size()).to(equal, 1);
     });
@@ -115,6 +118,9 @@ Screw.Unit(function(){
 
   describe("select with no id attribute that has same name as another select element", function(){
     before(function(){
+      $('a.ninja_search_activation:nth(1)').click();
+    });
+    after(function(){
       $('a.ninja_search_activation:nth(1)').click();
     });
     it("should have unique ids for each select", function(){
