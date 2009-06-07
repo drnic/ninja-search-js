@@ -422,8 +422,8 @@ var LiquidMetal = function() {
           }
         });
       }
-      return false;
     });
+    return false;
   });
 })(jQuery); 
 
