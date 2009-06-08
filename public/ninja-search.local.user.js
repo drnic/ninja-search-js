@@ -21,13 +21,12 @@
     style.setAttribute("type", "text/css");
     style.setAttribute("rel", "stylesheet");
     style.setAttribute("media", "screen");
-    style.setAttribute("href", "http://drnic.github.com/ninja-search-js/dist/stylesheets/flexselect.css");
+    style.setAttribute("href", "http://ninja-search-js.local/stylesheets/flexselect.css");
     head.appendChild(style);
   };
 
   var require = function(src) {
     var script = document.createElement("script");
-    script.setAttribute("language", "javascript");
     script.setAttribute("src", src);
     head.appendChild(script);
   };

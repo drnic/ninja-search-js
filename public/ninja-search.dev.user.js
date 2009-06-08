@@ -27,7 +27,6 @@
 
   var require = function(src) {
     var script = document.createElement("script");
-    script.setAttribute("language", "javascript");
     script.setAttribute("src", src);
     head.appendChild(script);
   };
