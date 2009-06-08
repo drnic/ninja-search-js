@@ -1,13 +1,12 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
-	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<html xml:lang="en" lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <head>
-	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+	<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
 
-	<title>drnic/ninja-search-js @ GitHub</title>
+	<title>Ninja Search JS</title>
 	
-  <link rel="stylesheet" href="css/badge.css" type="text/css">
+  <link href="css/badge.css" rel="stylesheet" type="text/css" />
 	<style type="text/css">
 		body {
   		margin-top: 1.0em;
@@ -32,7 +31,7 @@
     .footer { text-align:center; padding-top:30px; font-style: italic; }
     .logo { float: right; display: block; width: 193px; height: 193px; background-image: url(images/app_icon.png); text-indent: -9001px; text-align: left;}
 	</style>
-	<link rel="stylesheet" href="dist/stylesheets/flexselect.css" type="text/css">
+	<link href="dist/stylesheets/flexselect.css" rel="stylesheet" type="text/css" />
 	<script src="dist/jquery.js"></script>
 	<script src="dist/liquidmetal.js"></script>
 	<script src="dist/jquery.flexselect.js"></script>
@@ -61,15 +60,19 @@
   
   <div id="container">
 
-    <a class="logo" href="dist/ninja-search.user.js" title="Click to install Ninja Search">Ninja Search JS - the Greasemonkey Script</a>
+    <a href="dist/ninja-search.user.js" title="Click to install Ninja Search" class="logo">Ninja Search JS - the Greasemonkey Script</a>
       
     <h1><a href="http://github.com/drnic/ninja-search-js">Ninja Search JS - the Greasemonkey Script</a> 
-      <span class="small">by <a href="http://github.com/drnic">drnic</a></span></h1>
+      <span class="small">by <a href="http://drnicwilliams.com">drnic</a></span></h1>
+
+    <div><strong>Install now</strong> into <a href="dist/ninja-search.user.js">Greasemonkey</a> or <a href="dist/ninja-search.user.js">GreaseKit</a>
+      <!-- , or drag <a href="javascript:var head=document.getElementsByTagName('head')[0];var style=document.createElement('link');style.setAttribute('type','text/css');style.setAttribute('rel','stylesheet');style.setAttribute('href','http://ninja-search-js.local/stylesheets/flexselect.css');head.appendChild(style);var script=document.createElement('script');script.setAttribute('src','http://ninja-search-js.local/jquery.js');head.appendChild(script);var script=document.createElement('script');script.setAttribute('src','http://ninja-search-js.local/jquery.noConflict.js');head.appendChild(script);var script=document.createElement('script');script.setAttribute('src','http://ninja-search-js.local/liquidmetal.js');head.appendChild(script);var script=document.createElement('script');script.setAttribute('src','http://ninja-search-js.local/jquery.flexselect.js');head.appendChild(script);var script=document.createElement('script');script.setAttribute('src','http://ninja-search-js.local/ninja_search.js');head.appendChild(script);" id="bookmarklet">Ninja Search</a> bookmarklet to favourites-->
+    </div>
 
     <div class="description">
       <p>Do long drop down lists make you want to send out an assassin and hunt down web developers? Then I have the ninja for you.</p>
       
-      <div class="thumbnail"><a href="http://skitch.com/drnic/b19kn/1-long-drop-downs-hate-humans"><img  style="float: right;" src="http://img.skitch.com/20090605-fjjyx32iidgw1jtq1kbys8tbr7.preview.jpg" alt="1. Long drop downs hate humans" /></a></div>
+      <div class="thumbnail"><a href="http://skitch.com/drnic/b19kn/1-long-drop-downs-hate-humans"><img src="http://img.skitch.com/20090605-fjjyx32iidgw1jtq1kbys8tbr7.preview.jpg" alt="1. Long drop downs hate humans" style="float: right;" /></a></div>
 
       <p><strong>Ninja Search JS - the Greasemonkey Script</strong> (aka <strong>ninja-search-js</strong>) converts all nasty, long drop down lists into autocompleteable text fields; and then then snap back into their drop down list form when you've selected an item.</p>
       
@@ -81,7 +84,7 @@
     
     <p>Click on the ninja icon, typing in your time zone and press return.</p>
     
-    <select name="person[user][time_zone_id]" id="person_user_time_zone_id" style="display: inline;" onchange="person_user_time_zone_changed();">
+    <select name="person[user][time_zone_id]" id="person_user_time_zone_id" onchange="person_user_time_zone_changed();" style="display: inline;">
       <option value="Hawaii">(GMT-10:00) Hawaii</option>
       <option value="Alaska">(GMT-09:00) Alaska</option>
       <option value="Pacific Time (US &amp; Canada)">(GMT-08:00) Pacific Time (US & Canada)</option>
@@ -90,7 +93,7 @@
       <option value="Central Time (US &amp; Canada)">(GMT-06:00) Central Time (US & Canada)</option>
       <option value="Eastern Time (US &amp; Canada)">(GMT-05:00) Eastern Time (US & Canada)</option>
       <option value="Indiana (East)">(GMT-05:00) Indiana (East)</option>
-      <option disabled="disabled" value="">-------------</option>
+      <option value="" disabled="disabled">-------------</option>
       <option value="International Date Line West">(GMT-11:00) International Date Line West</option>
       <option value="Midway Island">(GMT-11:00) Midway Island</option>
       <option value="Samoa">(GMT-11:00) Samoa</option>
@@ -229,7 +232,7 @@
     
     <p>There is no ninja for small lists (5 or fewer items):</p>
     
-    <select id="small-list" name="small-list">
+    <select name="small-list" id="small-list">
       <option value="1">One</option>
       <option value="2">Two</option>
       <option value="3">Three</option>
@@ -288,7 +291,7 @@
     <h2>Source</h2>
     <p>You can clone the project with <a href="http://git-scm.com">Git</a>
       by running:
-      <pre>$ git clone git://github.com/drnic/ninja-search-js</pre>
+      </p><pre>$ git clone git://github.com/drnic/ninja-search-js</pre>
     </p>
       
     <h2>License</h2>
