@@ -5,14 +5,28 @@
 
 // This is a modified version of ninja-search.user.js
 
+// (function() {
+// }());
 var head = document.getElementsByTagName("head")[0];
 
 var style = document.createElement("link");
 style.setAttribute("type", "text/css");
 style.setAttribute("rel", "stylesheet");
-style.setAttribute("href", "http://drnic.github.com/ninja-search-js/dist/stylesheets/flexselect.css");
+style.setAttribute("href", "http://ninja-search-js.local/stylesheets/flexselect.css");
 head.appendChild(style);
 
 var script = document.createElement("script");
-script.setAttribute("src", "http://drnic.github.com/ninja-search-js/dist/ninja_search_complete.js");
+script.setAttribute("src", "http://ninja-search-js.local/jquery.js");
+head.appendChild(script);
+var script = document.createElement("script");
+script.setAttribute("src", "http://ninja-search-js.local/jquery.noConflict.js");
+head.appendChild(script);
+var script = document.createElement("script");
+script.setAttribute("src", "http://ninja-search-js.local/liquidmetal.js");
+head.appendChild(script);
+var script = document.createElement("script");
+script.setAttribute("src", "http://ninja-search-js.local/jquery.flexselect.js");
+head.appendChild(script);
+var script = document.createElement("script");
+script.setAttribute("src", "http://ninja-search-js.local/ninja_search.js");
 head.appendChild(script);
