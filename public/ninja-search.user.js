@@ -14,7 +14,7 @@
     var style = document.createElement("link");
     style.setAttribute("type", "text/css");
     style.setAttribute("rel", "stylesheet");
-    style.setAttribute("href", "http://drnic.github.com/ninja-search-js/dist/stylesheets/flexselect.css");
+    style.setAttribute("href", "https://drnic.github.io/ninja-search-js/dist/stylesheets/flexselect.css");
     head.appendChild(style);
   };
 
@@ -24,7 +24,7 @@
     head.appendChild(script);
   };
   var load_latest_ninja_search = function() {
-    require("http://drnic.github.com/ninja-search-js/dist/ninja_search_complete.js");
+    require("https://drnic.github.io/ninja-search-js/dist/ninja_search_complete.js");
   };
   
   flexselect_theme();
